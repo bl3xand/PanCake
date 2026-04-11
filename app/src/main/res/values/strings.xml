@@ -13,4 +13,48 @@
     <string name="low_importance">🥱Низкая важность</string>
     <string name="mid_importance">😱Важно</string>
     <string name="high_importance">🤬Очень важно</string>
+
+    <string name="dialog_add_task_title">Добавить задачу</string>
+    <string name="dialog_edit_task_title">Редактировать задачу</string>
+    <string name="dialog_add_item_title">Добавить товар</string>
+    <string name="dialog_edit_season_episode_title">Редактировать сезон и серию</string>
+    <string name="dialog_choose_action_title">Выберите действие</string>
+    <string name="dialog_add_action">Добавить</string>
+    <string name="dialog_save_action">Сохранить</string>
+    <string name="dialog_cancel_action">Отмена</string>
+
+    <string name="task_completed">Задача выполнена</string>
+    <string name="task_reopen">Переоткрыть задачу</string>
+    <string name="create_reminder">Создать напоминание</string>
+    <string name="edit_task">Редактировать задачу</string>
+    <string name="delete_action">Удалить</string>
+
+    <string name="movie_status_watching">Смотрю</string>
+    <string name="movie_status_planned">Буду смотреть</string>
+    <string name="movie_status_watched">Просмотрено</string>
+
+    <string name="recurrence_never">Никогда</string>
+    <string name="recurrence_daily">Каждый день</string>
+    <string name="recurrence_weekly">Каждую неделю</string>
+    <string name="recurrence_monthly">Каждый месяц</string>
+    <string name="recurrence_yearly">Каждый год</string>
+
+    <string name="hint_importance">Важность</string>
+    <string name="hint_recurrence">Повторение</string>
+    <string name="hint_task_name">Название задачи</string>
+    <string name="hint_item_name">Название товара</string>
+    <string name="hint_item_count">Количество</string>
+    <string name="hint_item_type">Тип товара</string>
+    <string name="hint_season">Сезон</string>
+    <string name="hint_episode">Серия</string>
+
+    <string name="select_date">Выбрать дату</string>
+    <string name="select_time">Выбрать время</string>
+    <string name="calendar">Календарь</string>
+    <string name="sort">Сортировать</string>
+    <string name="edit">Изменить</string>
+    <string name="date_label">Дата</string>
+    <string name="day_of_week_label">День недели</string>
+    <string name="add_task">Добавить задачу</string>
+    <string name="add_item">Добавить товар</string>
 </resources>

@@ -5,23 +5,45 @@
     android:orientation="vertical"
     android:padding="16dp">
 
-    <EditText
-        android:id="@+id/editTextItemName"
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputItemName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Название товара" />
+        android:hint="@string/hint_item_name">
 
-    <EditText
-        android:id="@+id/editTextItemCount"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Количество"
-        android:inputType="numberDecimal"/>
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editTextItemName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </com.google.android.material.textfield.TextInputLayout>
 
-    <Spinner
-        android:id="@+id/spinnerItemType"
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputItemCount"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp" />
+        android:hint="@string/hint_item_count">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editTextItemCount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputItemType"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:hint="@string/hint_item_type"
+        style="@style/Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu">
+
+        <com.google.android.material.textfield.MaterialAutoCompleteTextView
+            android:id="@+id/dropdownItemType"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusable="false"
+            android:inputType="none" />
+    </com.google.android.material.textfield.TextInputLayout>
 
 </LinearLayout>

@@ -16,6 +16,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Название"
+        android:textColor="?attr/colorOnSurface"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
@@ -28,6 +29,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Важность"
+        android:textColor="?attr/colorOnSurfaceVariant"
         android:textSize="14sp"
         app:layout_constraintEnd_toStartOf="@id/deleteButton"
         app:layout_constraintHorizontal_bias="0"
@@ -39,6 +41,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Осталось"
+        android:textColor="?attr/colorOnSurfaceVariant"
         android:textSize="14sp"
         app:layout_constraintEnd_toStartOf="@id/deleteButton"
         app:layout_constraintHorizontal_bias="0"
@@ -50,6 +53,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Повторение"
+        android:textColor="?attr/colorOnSurfaceVariant"
         android:textSize="14sp"
         app:layout_constraintEnd_toStartOf="@id/deleteButton"
         app:layout_constraintHorizontal_bias="0"
@@ -62,6 +66,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Крайний срок"
+        android:textColor="?attr/colorOnSurfaceVariant"
         android:textSize="14sp"
         app:layout_constraintEnd_toStartOf="@id/deleteButton"
         app:layout_constraintHorizontal_bias="0"
@@ -95,6 +100,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Создано"
+            android:textColor="?attr/colorOnSurfaceVariant"
             android:textSize="10sp" />
 
         <TextView
@@ -103,6 +109,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="5dp"
             android:text="Время"
+            android:textColor="?attr/colorOnSurfaceVariant"
             android:textSize="10sp" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

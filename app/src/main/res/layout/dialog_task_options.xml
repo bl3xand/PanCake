@@ -1,38 +1,50 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
     android:padding="16dp">
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/completeButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:drawableLeft="@drawable/complete_icon"
-        android:text="Задача выполнена" />
+        android:maxLines="2"
+        android:ellipsize="end"
+        app:icon="@drawable/complete_icon"
+        app:iconGravity="textStart"
+        app:iconPadding="12dp"
+        android:text="@string/task_completed" />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/addNotifyButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:drawableLeft="@drawable/notify_icon"
-        android:text="Создать напоминание"
+        android:maxLines="2"
+        android:ellipsize="end"
+        app:icon="@drawable/notify_icon"
+        app:iconGravity="textStart"
+        app:iconPadding="12dp"
+        android:text="@string/create_reminder"
         android:layout_marginTop="8dp" />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/editButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:drawableLeft="@drawable/edit_icon"
-        android:text="Редактировать задачу"
+        android:maxLines="2"
+        android:ellipsize="end"
+        app:icon="@drawable/edit_icon"
+        app:iconGravity="textStart"
+        app:iconPadding="12dp"
+        android:text="@string/edit_task"
         android:layout_marginTop="8dp" />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/cancelButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Отмена"
-        android:backgroundTint="?attr/colorErrorContainer"
-        android:textColor="?attr/colorOnErrorContainer"
+        style="@style/Widget.Pancake.Button.Negative"
+        android:text="@string/dialog_cancel_action"
         android:layout_marginTop="8dp" />
 </LinearLayout>

@@ -5,17 +5,29 @@
     android:orientation="vertical"
     android:padding="16dp">
 
-    <EditText
-        android:id="@+id/editTextSeason"
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputSeason"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Сезон"
-        android:inputType="number" />
+        android:hint="@string/hint_season">
 
-    <EditText
-        android:id="@+id/editTextEpisode"
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editTextSeason"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputEpisode"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Серия"
-        android:inputType="number" />
+        android:hint="@string/hint_episode">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editTextEpisode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number" />
+    </com.google.android.material.textfield.TextInputLayout>
 </LinearLayout>
