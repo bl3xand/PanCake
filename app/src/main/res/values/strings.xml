@@ -8,11 +8,13 @@
     <string name="food">🍏 Продукты</string>
     <string name="household_goods">🪥 Бытовые товары</string>
     <string name="clothes">👕 Одежда</string>
+    <string name="home_goods">🏠 Для дома</string>
+    <string name="tech_goods">💻 Техника</string>
     <string name="other_products">🎲 Другое</string>
 
-    <string name="low_importance">🥱Низкая важность</string>
-    <string name="mid_importance">😱Важно</string>
-    <string name="high_importance">🤬Очень важно</string>
+    <string name="low_importance">🥱 Низкая важность</string>
+    <string name="mid_importance">😱 Важно</string>
+    <string name="high_importance">🤬 Очень важно</string>
 
     <string name="dialog_add_task_title">Добавить задачу</string>
     <string name="dialog_edit_task_title">Редактировать задачу</string>
@@ -52,6 +54,13 @@
     <string name="select_time">Выбрать время</string>
     <string name="selected_date_format">Дата: %1$s</string>
     <string name="selected_time_format">Время: %1$s</string>
+    <string name="no_time">Без времени</string>
+    <string name="overdue">Просрочено</string>
+    <string name="time_left_label">Осталось</string>
+    <string name="deadline_label">Крайний срок</string>
+    <string name="no_time_tasks">Без времени</string>
+    <string name="completed_tasks">Выполненные задачи</string>
+    <string name="added_items">Добавлено</string>
     <string name="calendar">Календарь</string>
     <string name="sort">Сортировать</string>
     <string name="edit">Изменить</string>

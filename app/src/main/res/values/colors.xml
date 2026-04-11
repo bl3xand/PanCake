@@ -3,18 +3,23 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
 
-    <color name="card_color_1">#3A5068</color>
-    <color name="card_color_2">#552C3B</color>
-    <color name="card_color_3">#8A6A57</color>
-    <color name="card_color_4">#4F4F56</color>
+    <color name="shopping_food">#1F3449</color>
+    <color name="shopping_household_goods">#3D1F2E</color>
+    <color name="shopping_clothes">#5A4535</color>
+    <color name="shopping_other">#6A6F86</color>
+    <color name="shopping_home_goods">#49645A</color>
+    <color name="shopping_tech_goods">#4B5678</color>
+
+    <color name="shopping_added">#353539</color>
+
+    <color name="low_importance">#4A5C3F</color>
+    <color name="mid_importance">#5C4738</color>
+    <color name="high_importance">#613340</color>
+    <color name="pass_importance">#543B68</color>
 
     <color name="button_red">#FF7E73</color>
-
-    <color name="low_importance">#677C5A</color>
-    <color name="mid_importance">#8A6B55</color>
-    <color name="high_importance">#8C4D5F</color>
-    <color name="pass_importance">#795396</color>
-
+    <color name="completed_task_container">#1F3A20</color>
+    <color name="completed_task_on_container">#DCEFD9</color>
 
     <color name="pink">#E91E63</color>
     <color name="blue">#00BCD4</color>
@@ -27,6 +32,7 @@
     <color name="red">#FF0000</color>
     <color name="dark_red">#910D00</color>
     <color name="purple">#870091</color>
+
 </resources>
 
 

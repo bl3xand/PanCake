@@ -10,9 +10,9 @@
     </style>
 
     <style name="Widget.Pancake.Button.Negative" parent="Widget.Pancake.Button.DialogAction">
-        <item name="backgroundTint">?attr/colorSurfaceVariant</item>
-        <item name="android:textColor">?attr/colorOnSurfaceVariant</item>
-        <item name="iconTint">?attr/colorOnSurfaceVariant</item>
+        <item name="backgroundTint">?attr/colorTertiaryContainer</item>
+        <item name="android:textColor">?attr/colorOnTertiaryContainer</item>
+        <item name="iconTint">?attr/colorOnTertiaryContainer</item>
     </style>
 
     <style name="Widget.Pancake.Button.Toolbar" parent="Widget.Material3.Button.TonalButton">
