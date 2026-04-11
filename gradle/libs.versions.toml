@@ -1,42 +1,29 @@
 [versions]
-agp = "8.5.1"
-badge = "1.4.0"
-blur = "1.0.1"
-button = "2.0.0"
-checkbox = "2.7.0"
-compiler = "4.14.2"
-converterGson = "2.9.0"
+agp = "9.1.0"
+compiler = "5.0.5"
+converterGson = "3.0.0"
 dagger = "2.40"
-edittext = "1.7.0"
-firebaseBom = "33.4.0"
-firebaseBomVersion = "33.1.2"
+firebaseAnalytics = "23.2.0"
+firebaseBom = "34.12.0"
 fragmentKtx = "1.8.5"
-fragmentKtxVersion = "1.8.2"
-glide = "4.14.2"
+fragmentKtxVersion = "1.8.9"
+glide = "5.0.5"
 hivemqMqttClient = "1.3.3"
-kotlin = "1.9.0"
-coreKtx = "1.13.1"
+kotlin = "2.3.20"
+coreKtx = "1.18.0"
 junit = "4.13.2"
-junitVersion = "1.2.1"
-espressoCore = "3.6.1"
-appcompat = "1.7.0"
+junitVersion = "1.3.0"
+espressoCore = "3.7.0"
+appcompat = "1.7.1"
 legacySupportV4 = "1.0.0"
-lifecycleViewmodelKtx = "2.8.6"
-material = "1.12.0"
-activity = "1.8.0"
-constraintlayout = "2.1.4"
-moquetteBroker = "0.12.1"
-moquetteBrokerVersion = "0.17"
-moquetteMoquetteBroker = "0.17"
-moquetteMoquetteBrokerVersion = "0.17"
-navigationUiKtx = "2.8.3"
-orgEclipsePahoAndroidService = "1.1.1"
-orgEclipsePahoClientMqttv3 = "1.2.5"
-retrofit = "2.9.0"
-spinner = "2.4.1"
+lifecycleViewmodelKtx = "2.10.0"
+material = "1.13.0"
+activity = "1.13.0"
+constraintlayout = "2.2.1"
+navigationUiKtx = "2.9.7"
+retrofit = "3.0.0"
 supportV4 = "28.0.0"
-switch = "2.1.0"
-workRuntimeKtx = "2.9.1"
+workRuntimeKtx = "2.11.2"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -49,10 +36,9 @@ androidx-work-runtime-ktx = { module = "androidx.work:work-runtime-ktx", version
 
 compiler = { module = "com.github.bumptech.glide:compiler", version.ref = "compiler" }
 converter-gson = { module = "com.squareup.retrofit2:converter-gson", version.ref = "converterGson" }
-firebase-analytics = { module = "com.google.firebase:firebase-analytics" }
-firebase-bom = { module = "com.google.firebase:firebase-bom", version.ref = "firebaseBomVersion" }
-firebase-crashlytics = { module = "com.google.firebase:firebase-crashlytics" }
-firebase-database-ktx = { module = "com.google.firebase:firebase-database-ktx" }
+firebase-analytics = { module = "com.google.firebase:firebase-analytics", version.ref = "firebaseAnalytics" }
+firebase-bom = { module = "com.google.firebase:firebase-bom", version.ref = "firebaseBom" }
+firebase-database = { module = "com.google.firebase:firebase-database" }
 glide = { module = "com.github.bumptech.glide:glide", version.ref = "glide" }
 junit = { group = "junit", name = "junit", version.ref = "junit" }
 androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
