@@ -6,10 +6,12 @@
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/navigationView"
+        style="@style/Widget.Pancake.NavigationBar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="top"
         android:background="?attr/colorSurface"
+        app:labelVisibilityMode="labeled"
         app:itemIconTint="@color/bottom_nav_item_colors"
         app:itemTextColor="@color/bottom_nav_item_colors"
         app:menu="@menu/bottom_navigation_menu" />
@@ -18,7 +20,7 @@
         android:id="@+id/recyclerView"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_marginTop="?attr/actionBarSize"
+        android:layout_marginTop="80dp"
         app:layout_behavior="@string/appbar_scrolling_view_behavior" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -27,6 +29,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|end"
         android:layout_margin="16dp"
+        android:contentDescription="@string/add_item"
         android:src="@drawable/add_icon" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

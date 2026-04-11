@@ -50,6 +50,8 @@
 
     <string name="select_date">Выбрать дату</string>
     <string name="select_time">Выбрать время</string>
+    <string name="selected_date_format">Дата: %1$s</string>
+    <string name="selected_time_format">Время: %1$s</string>
     <string name="calendar">Календарь</string>
     <string name="sort">Сортировать</string>
     <string name="edit">Изменить</string>
@@ -57,4 +59,6 @@
     <string name="day_of_week_label">День недели</string>
     <string name="add_task">Добавить задачу</string>
     <string name="add_item">Добавить товар</string>
+    <string name="created_by_label">Создано</string>
+    <string name="time_label">Время</string>
 </resources>

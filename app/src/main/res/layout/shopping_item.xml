@@ -1,14 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/Widget.Pancake.Card"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:paddingStart="20dp"
-    android:layout_marginStart="5dp"
-    android:layout_marginEnd="5dp"
-    android:paddingEnd="20dp"
-    android:paddingBottom="10dp"
-    android:paddingTop="10dp">
+    android:layout_marginStart="4dp"
+    android:layout_marginEnd="4dp"
+    android:layout_marginBottom="4dp"
+    app:cardBackgroundColor="?attr/colorSurfaceContainer">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:paddingTop="12dp"
+        android:paddingBottom="12dp">
 
     <!-- Горизонтальный LinearLayout для Названия товара и Количества -->
     <LinearLayout
@@ -25,19 +32,19 @@
             android:id="@+id/itemName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Название"
+            android:text="@string/hint_item_name"
+            android:textAppearance="@style/TextAppearance.Pancake.CardTitle"
             android:textColor="?attr/colorOnSurface"
-            android:textSize="24sp"
-            android:textStyle="bold" />
+            />
 
         <!-- Количество товара -->
         <TextView
             android:id="@+id/itemCount"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Количество"
+            android:text="@string/hint_item_count"
+            android:textAppearance="@style/TextAppearance.Pancake.CardTitle"
             android:textColor="?attr/colorOnSurface"
-            android:textSize="24sp"
             android:layout_marginStart="8dp" />
     </LinearLayout>
 
@@ -46,9 +53,9 @@
         android:id="@+id/itemType"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Тип"
+        android:text="@string/hint_item_type"
+        android:textAppearance="@style/TextAppearance.Pancake.CardBody"
         android:textColor="?attr/colorOnSurfaceVariant"
-        android:textSize="12sp"
         app:layout_constraintEnd_toStartOf="@id/deleteButton"
         app:layout_constraintHorizontal_bias="0"
         app:layout_constraintStart_toStartOf="parent"
@@ -57,9 +64,11 @@
     <!-- Кнопка удаления, по центру справа -->
     <ImageButton
         android:id="@+id/deleteButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
         android:background="?attr/selectableItemBackgroundBorderless"
+        android:contentDescription="@string/delete_action"
+        android:padding="8dp"
         android:src="@drawable/delete_icon"
         app:layout_constraintBottom_toTopOf="@id/infoLayout"
         app:layout_constraintEnd_toEndOf="parent"
@@ -79,17 +88,20 @@
             android:id="@+id/itemCreatedBy"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Создано"
+            android:text="@string/created_by_label"
+            android:textAppearance="@style/TextAppearance.Pancake.CardMeta"
             android:textColor="?attr/colorOnSurfaceVariant"
-            android:textSize="10sp" />
+            />
 
         <TextView
             android:id="@+id/itemTimestamp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="5dp"
-            android:text="Время"
+            android:text="@string/time_label"
+            android:textAppearance="@style/TextAppearance.Pancake.CardMeta"
             android:textColor="?attr/colorOnSurfaceVariant"
-            android:textSize="10sp" />
+            />
     </LinearLayout>
-</androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.card.MaterialCardView>

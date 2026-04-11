@@ -61,6 +61,7 @@
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/buttonSelectDate"
+        style="@style/Widget.Pancake.Button.DialogAction"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
@@ -73,6 +74,7 @@
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/buttonSelectTime"
+        style="@style/Widget.Pancake.Button.DialogAction"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"

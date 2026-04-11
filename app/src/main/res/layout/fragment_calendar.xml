@@ -22,15 +22,12 @@
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/buttonCalendar"
+                style="@style/Widget.Pancake.Button.Toolbar"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="start"
-                android:minWidth="0dp"
-                android:paddingStart="12dp"
-                android:paddingEnd="12dp"
-                android:maxLines="1"
-                android:ellipsize="end"
                 android:backgroundTint="?attr/colorPrimaryContainer"
+                android:textColor="?attr/colorOnPrimaryContainer"
                 android:text="@string/calendar" />
 
             <!-- LinearLayout для отображения текущей даты и дня недели -->
@@ -59,15 +56,13 @@
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/buttonEdit"
+                style="@style/Widget.Pancake.Button.Toolbar"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="end"
                 android:layout_marginEnd="16dp"
-                android:minWidth="0dp"
-                android:paddingStart="12dp"
-                android:paddingEnd="12dp"
-                android:maxLines="1"
-                android:ellipsize="end"
+                android:backgroundTint="?attr/colorSurfaceContainerHigh"
+                android:textColor="?attr/colorOnSurface"
                 android:text="@string/edit" />
         </androidx.appcompat.widget.Toolbar>
     </com.google.android.material.appbar.AppBarLayout>
