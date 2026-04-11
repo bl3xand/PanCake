@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="card_color_1">#3A5068</color>
+    <color name="card_color_2">#552C3B</color>
+    <color name="card_color_3">#8A6A57</color>
+    <color name="card_color_4">#4F4F56</color>
+
+    <color name="button_red">#FF7E73</color>
+
+    <color name="low_importance">#677C5A</color>
+    <color name="mid_importance">#8A6B55</color>
+    <color name="high_importance">#8C4D5F</color>
+    <color name="pass_importance">#795396</color>
+
+
+    <color name="pink">#E91E63</color>
+    <color name="blue">#00BCD4</color>
+    <color name="dark_blue">#0000ff</color>
+    <color name="green">#84F802</color>
+    <color name="dark_green">#179316</color>
+    <color name="yellow">#ffff00</color>
+    <color name="dark_yellow">#FFA900</color>
+    <color name="orange">#FF7801</color>
+    <color name="red">#FF0000</color>
+    <color name="dark_red">#910D00</color>
+    <color name="purple">#870091</color>
+</resources>
+
+

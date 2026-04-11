@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Pancake</string>
+    <string name="fatal_error">Fatal error:</string>
+    <string name="failed_to_acquire_permissions_will_not_launch">Failed to acquire permissions, will not launch</string>
+    <string name="ok">Ok</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="food">🍏 Продукты</string>
+    <string name="household_goods">🪥 Бытовые товары</string>
+    <string name="clothes">👕 Одежда</string>
+    <string name="other_products">🎲 Другое</string>
+
+    <string name="low_importance">🥱Низкая важность</string>
+    <string name="mid_importance">😱Важно</string>
+    <string name="high_importance">🤬Очень важно</string>
+</resources>

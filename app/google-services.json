@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "1071101345820",
+    "firebase_url": "https://pancake-55f27-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "pancake-55f27",
+    "storage_bucket": "pancake-55f27.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1071101345820:android:4affc1d6c1bfdee6621fd9",
+        "android_client_info": {
+          "package_name": "ru.bl3xand.pancake"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAtR7gm2WzxAeqyZN3_thJbJ6mNLucpx4s"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,15 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@color/black" />
+
+    <item>
+        <inset
+                android:insetLeft="1000dp"
+                android:insetRight="1000dp"
+                android:insetTop="1000dp"
+                android:insetBottom="1000dp">
+            <bitmap
+                    android:gravity="center"
+                    android:src="@drawable/mts_logo_no_gps_splash" />
+        </inset>
+    </item>
+</layer-list>

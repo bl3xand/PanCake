@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginStart="10dp"
+    android:layout_marginEnd="10dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingStart="20dp"
+    android:paddingEnd="20dp"
+    android:paddingBottom="10dp"
+    android:paddingTop="10dp">
+
+    <!-- Горизонтальный LinearLayout для Названия товара и Количества -->
+    <TextView
+        android:id="@+id/taskName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Название"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <!-- Тип товара -->
+    <TextView
+        android:id="@+id/importanceType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Важность"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toStartOf="@id/deleteButton"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/taskName" />
+
+    <TextView
+        android:id="@+id/slaType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Осталось"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toStartOf="@id/deleteButton"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/importanceType" />
+
+    <TextView
+        android:id="@+id/recurrenceType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Повторение"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toStartOf="@id/deleteButton"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/slaType" />
+
+
+    <TextView
+        android:id="@+id/deadlineType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Крайний срок"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toStartOf="@id/deleteButton"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/recurrenceType" />
+
+
+    <!-- Кнопка удаления, по центру справа -->
+    <ImageButton
+        android:id="@+id/deleteButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:src="@drawable/delete_icon"
+        app:layout_constraintTop_toBottomOf="@id/taskName"
+        app:layout_constraintEnd_toEndOf="parent"
+         />
+
+    <!-- Время и Создано, в правом нижнем углу -->
+    <LinearLayout
+        android:id="@+id/infoLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/recurrenceType">
+
+        <TextView
+            android:id="@+id/itemCreatedBy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Создано"
+            android:textSize="10sp" />
+
+        <TextView
+            android:id="@+id/itemTimestamp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:text="Время"
+            android:textSize="10sp" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

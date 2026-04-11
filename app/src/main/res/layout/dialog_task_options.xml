@@ -1,0 +1,37 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <Button
+        android:id="@+id/completeButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/complete_icon"
+        android:text="Задача выполнена" />
+
+    <Button
+        android:id="@+id/addNotifyButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/notify_icon"
+        android:text="Создать напоминание"
+        android:layout_marginTop="8dp" />
+
+    <Button
+        android:id="@+id/editButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/edit_icon"
+        android:text="Редактировать задачу"
+        android:layout_marginTop="8dp" />
+
+    <Button
+        android:id="@+id/cancelButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Отмена"
+        android:backgroundTint="@color/button_red"
+        android:layout_marginTop="8dp" />
+</LinearLayout>

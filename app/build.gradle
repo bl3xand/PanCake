@@ -1,0 +1,122 @@
+plugins {
+    id 'com.android.application'
+    id("com.google.gms.google-services")
+    id("com.google.firebase.crashlytics")
+}
+
+android {
+    namespace 'ru.bl3xand.pancake'
+    compileSdk 35
+
+    defaultConfig {
+        applicationId "ru.bl3xand.pancake"
+        minSdk 24
+        targetSdk 35
+        versionCode 1
+        versionName "0.0.1"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            versionNameSuffix "release."
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            shrinkResources true
+        }
+        debug {
+            versionNameSuffix "debug."
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            shrinkResources false
+        }
+    }
+
+    buildFeatures {
+        viewBinding true
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+
+    kotlin {
+        jvmToolchain(17)
+    }
+
+    packagingOptions {
+        resources.excludes.add("META-INF/*")
+    }
+}
+
+androidComponents {
+    onVariants(selector().all()) { variant ->
+        def buildTypeSuffix = ""
+        if (variant.buildType == "release") {
+            buildTypeSuffix = "release."
+        } else if (variant.buildType == "debug") {
+            buildTypeSuffix = "debug."
+        }
+        def baseVersionName = android.defaultConfig.versionName
+        def newVersionName = "${buildTypeSuffix}${baseVersionName}"
+
+        variant.outputs.each { output ->
+            output.versionName.set(newVersionName)
+        }
+    }
+}
+
+// Переименование APK файла через задачу
+tasks.configureEach { task ->
+    if (task.name.startsWith("assemble")) {
+        task.doLast {
+            def outputDir = file("${buildDir}/outputs/apk")
+            if (outputDir.exists()) {
+                outputDir.eachFileRecurse { file ->
+                    if (file.name.endsWith(".apk") && !file.name.startsWith("Pancake")) {
+                        def buildType = ""
+                        if (file.path.contains("/release/")) {
+                            buildType = "release."
+                        } else if (file.path.contains("/debug/")) {
+                            buildType = "debug."
+                        }
+                        def versionName = android.defaultConfig.versionName
+                        def newName = "Pancake ${buildType}${versionName}.apk"
+                        def newFile = new File(file.parentFile, newName)
+                        file.renameTo(newFile)
+                    }
+                }
+            }
+        }
+    }
+}
+
+dependencies {
+    implementation libs.androidx.core.ktx
+    implementation libs.androidx.appcompat
+    implementation libs.material
+    implementation libs.androidx.activity
+    implementation libs.androidx.constraintlayout
+    testImplementation libs.junit
+    androidTestImplementation libs.androidx.junit
+    androidTestImplementation libs.androidx.espresso.core
+    implementation libs.androidx.legacy.support.v4
+    implementation libs.support.v4
+    implementation libs.androidx.work.runtime.ktx
+    implementation libs.androidx.fragment.ktx
+
+    implementation libs.androidx.lifecycle.viewmodel.ktx
+    implementation libs.androidx.lifecycle.livedata.ktx
+    implementation libs.androidx.navigation.ui.ktx
+
+    implementation(platform(libs.firebase.bom))
+    implementation(libs.firebase.crashlytics)
+    implementation(libs.firebase.analytics)
+    implementation(libs.firebase.database.ktx)
+
+    implementation libs.glide
+    annotationProcessor libs.compiler
+    implementation libs.retrofit
+    implementation libs.converter.gson
+}
