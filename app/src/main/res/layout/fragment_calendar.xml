@@ -23,7 +23,7 @@
                 android:layout_width="135dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="start"
-                android:backgroundTint="@color/material_dynamic_primary80"
+                android:backgroundTint="?attr/colorPrimaryContainer"
                 android:text="Календарь" />
 
             <!-- LinearLayout для отображения текущей даты и дня недели -->

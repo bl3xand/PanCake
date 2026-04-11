@@ -32,6 +32,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Отмена"
-        android:backgroundTint="@color/button_red"
+        android:backgroundTint="?attr/colorErrorContainer"
+        android:textColor="?attr/colorOnErrorContainer"
         android:layout_marginTop="8dp" />
 </LinearLayout>

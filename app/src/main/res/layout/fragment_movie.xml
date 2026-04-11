@@ -9,6 +9,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="top"
+        android:background="?attr/colorSurface"
+        app:itemIconTint="@color/bottom_nav_item_colors"
+        app:itemTextColor="@color/bottom_nav_item_colors"
         app:menu="@menu/bottom_navigation_menu" />
 
     <androidx.recyclerview.widget.RecyclerView
