@@ -1,42 +1,42 @@
-# Pancake (Android)
+# Pancake
 
-Приложение для ведения заметок и контента с синхронизацией изображений через GitHub и интеграциями Firebase.
+Pancake - это уютный Android-органайзер для пары, семьи или друзей.
+В одном пространстве можно объединить неограниченное количество участников и вести общие заметки, покупки, планы и список фильмов/сериалов.
 
-## Что вынесено из кода
+## Почему Pancake
 
-Секреты и персональные настройки больше не должны храниться в исходниках:
-- `GitHub token`
-- `Kinopoisk API key`
-- release signing (`.keystore`, пароли)
-- `google-services.json`
+- Полностью бесплатная синхронизация
+- Self-hosted подход: вы подключаете свои Firebase/GitHub и управляете данными сами
+- Один общий Space для всех участников
+- Полноценный Markdown-редактор
+- Для тех, кто не знает Markdown: встроены кнопки для легкого форматирования (заголовки, списки, цитаты, код и т.д.)
+- Чистый интерфейс без лишней сложности с поддержкой Dynamic color
 
-## Требования
+Чтобы быстро поделиться своим пространством, в любом месте приложения сделайте жест тремя пальцами вниз.
 
-- Android Studio (последняя стабильная)
-- JDK 17
-- Android SDK (minSdk 24, target/compile 36)
-- Gradle wrapper из проекта (`./gradlew`)
+## Какие проблемы решает
+
+Во многих похожих приложениях часто не хватает гибкости для совместной работы и структурирования информации.
+Pancake закрывает это за счет:
+
+- Единого пространства для нескольких людей, а не разрозненных личных списков
+- Удобной системы заметок с форматированием и быстрым редактированием
+- Списков покупок, календаря и кино-трекера в одном приложении
+- Контроля над инфраструктурой синхронизации (свои сервисы, свои ключи)
 
 ## Быстрый старт
 
-1. Клонируйте приватный репозиторий.
-2. Скопируйте файл с секретами:
-   - `cp secrets.properties.example secrets.properties`
-3. Заполните `secrets.properties` своими значениями.
-4. Положите `google-services.json` в `app/src/google-services.json`.
-5. Откройте проект в Android Studio и дождитесь синхронизации Gradle.
-6. Запустите debug-сборку.
+1. Склонируйте репозиторий.
+2. Скопируйте `secrets.properties.example` в `secrets.properties`.
+3. Добавьте `google-services.json` в `app/src/google-services.json`.
+4. Откройте проект в Android Studio и запустите.
 
-## Настройка секретов
-
-Файл: `secrets.properties` (не коммитить)
-
-Пример структуры:
+Пример `secrets.properties`:
 
 ```properties
 github.token=your_github_token_here
 github.owner=your-github-user-or-org
-github.repo=your-repo
+github.repo=your-repo-name
 github.branch=main
 
 kinopoisk.apiKey=your_kinopoisk_api_key
@@ -47,81 +47,37 @@ RELEASE_KEY_ALIAS=your_key_alias
 RELEASE_KEY_PASSWORD=your_key_password
 ```
 
-### GitHub token
-
-Нужен для синхронизации изображений с GitHub API.
-
-Рекомендуется создать fine-grained PAT с минимально нужными правами для конкретного репозитория:
-- `Contents: Read and write`
-- при необходимости удаления/обновления файлов - также write на contents
+## Подключение сервисов
 
 ### Firebase
 
-1. Создайте проект в Firebase Console.
-2. Добавьте Android-приложение с пакетом `ru.bl3xand.pancake`.
-3. Скачайте `google-services.json`.
-4. Положите его в `app/src/google-services.json`.
+Нужен для авторизации и хранения/синхронизации данных между участниками пространства.
 
-В репозитории есть шаблон: `app/src/google-services.json.example`.
+- Создайте проект и Android-приложение с package name: `ru.bl3xand.pancake`
+- Скачайте `google-services.json` и положите в `app/src/google-services.json`
+- Сайт: https://console.firebase.google.com/
+
+### GitHub
+
+Нужен для синхронизации изображений (вложения в заметках).
+
+- Создайте Personal Access Token (PAT)
+- Заполните `github.token`, `github.owner`, `github.repo`, `github.branch` в `secrets.properties`
+- Сайт: https://github.com/settings/tokens
 
 ### Kinopoisk API
 
-1. Получите API key у провайдера Kinopoisk API.
-2. Запишите ключ в `secrets.properties` в `kinopoisk.apiKey`.
+Нужен для поиска фильмов/сериалов и автоподстановки данных в кино-разделе.
 
-## Сборка
+- Получите API-ключ
+- Укажите `kinopoisk.apiKey` в `secrets.properties`
+- Сайт: https://kinopoisk.dev/
 
-Debug:
+## Безопасность данных
 
-```bash
-./gradlew assembleDebug
-```
-
-Release (с заполненными signing-параметрами):
-
-```bash
-./gradlew assembleRelease
-```
-
-## Безопасность: что делать, если секреты уже попали в коммиты
-
-Важно: сначала **сразу ротируйте/отзовите** все утекшие ключи (GitHub token, Firebase, Kinopoisk, keystore passwords).
-
-Дальше можно переписать историю и удалить секреты из старых коммитов:
-
-### Вариант 1: `git filter-repo` (рекомендуется)
-
-1. Установите `git-filter-repo`.
-2. Удалите чувствительные файлы из истории:
-
-```bash
-git filter-repo --path app/src/google-services.json --invert-paths
-```
-
-3. Замените токены по маскам через `--replace-text` (шаблон: `security/replace-secrets.txt.example`):
-
-```bash
-git filter-repo --replace-text security/replace-secrets.txt.example
-```
-
-4. Форс-пуш:
-
-```bash
-git push --force --all
-git push --force --tags
-```
-
-5. Попросите всех участников сделать reclone, чтобы не вернуть старую историю.
-
-### Вариант 2: BFG Repo-Cleaner
-
-Удобен для массового удаления секретов/бинарников, но `git filter-repo` гибче.
+- Данные пространства шифруются на стороне приложения перед синхронизацией
+- Поэтому владелец подключенных API-сервисов (Firebase/GitHub и т.д.) хранит данные в зашифрованном виде
 
 ## Лицензия
 
-В проект добавлена лицензия `Apache-2.0` + `NOTICE`.
-
-Это позволяет использовать и копировать код при условии сохранения уведомлений об авторстве и лицензии.
-Если хотите акцент именно на ссылке на автора, укажите ее в `NOTICE` и поддерживайте этот файл в актуальном состоянии.
-
-
+`Apache-2.0` (см. `LICENSE` и `NOTICE`).

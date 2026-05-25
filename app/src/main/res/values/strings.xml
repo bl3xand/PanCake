@@ -224,7 +224,12 @@
     <string name="action_sign_up">Зарегистрироваться</string>
     <string name="action_go_back">Вернуться</string>
     <string name="share">Поделиться</string>
-    <string name="space_welcome_save_hint">Сохраните этот код или QR, чтобы не потерять доступ к своему пространству.\nЧтобы поделиться им после входа, проведите двумя пальцами вниз на любом из экранов приложения.</string>
+    <string name="space_welcome_save_hint">Сохраните этот код или QR, чтобы не потерять доступ к своему пространству.\nЧтобы поделиться им после входа, проведите тремя пальцами вниз на любом из экранов приложения.</string>
+    <string name="space_share_options">Дополнительно</string>
+    <string name="space_share_contact_developer">Написать разработчику</string>
+    <string name="space_share_open_licenses">Лицензии</string>
+    <string name="developer_github_url" translatable="false">https://github.com/bl3xand</string>
+    <string name="licenses_dialog_title">Open-source лицензии</string>
     <string name="confirm_exit_space_title">Выйти из пространства?</string>
     <string name="confirm_exit_space_message">Вы точно хотите выйти из своего пространства?</string>
     <string name="sign_up_success">Аккаунт успешно зарегистрирован!</string>

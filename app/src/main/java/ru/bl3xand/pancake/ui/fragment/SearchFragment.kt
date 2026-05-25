@@ -7,9 +7,7 @@ import android.view.KeyEvent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
-import androidx.core.view.updateLayoutParams
+import android.view.inputmethod.EditorInfo
 import androidx.core.widget.addTextChangedListener
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
@@ -108,6 +106,17 @@ class SearchFragment : Fragment() {
                 return@setOnKeyListener true
             }
             false
+        }
+
+        binding.editTextSearch.setOnEditorActionListener { _, actionId, event ->
+            val isImeSearch = actionId == EditorInfo.IME_ACTION_SEARCH || actionId == EditorInfo.IME_ACTION_DONE
+            val isEnter = event?.keyCode == KeyEvent.KEYCODE_ENTER && event.action == KeyEvent.ACTION_DOWN
+            if (isImeSearch || isEnter) {
+                submitSearchNow(binding.editTextSearch.text?.toString().orEmpty())
+                true
+            } else {
+                false
+            }
         }
     }
 
@@ -234,6 +243,10 @@ class SearchFragment : Fragment() {
     private fun observeViewModel() {
         viewModel.searchResults.observe(viewLifecycleOwner) { results ->
             searchAdapter.updateResults(results)
+        }
+
+        viewModel.isLoading.observe(viewLifecycleOwner) { isLoading ->
+            binding.progressSearch.visibility = if (isLoading) View.VISIBLE else View.GONE
         }
     }
 }

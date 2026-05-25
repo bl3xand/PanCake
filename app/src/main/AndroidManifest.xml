@@ -38,6 +38,9 @@
             android:name=".ui.activity.SpaceShareActivity"
             android:exported="false" />
         <activity
+            android:name=".ui.activity.OpenSourceLicensesActivity"
+            android:exported="false" />
+        <activity
             android:name=".ui.activity.SpaceWelcomeShareActivity"
             android:exported="false" />
         <activity

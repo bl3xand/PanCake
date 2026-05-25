@@ -6,9 +6,11 @@ import android.content.Intent
 import android.graphics.Bitmap
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.widget.PopupMenu
 import androidx.core.content.edit
 import androidx.core.graphics.createBitmap
 import androidx.core.graphics.set
+import androidx.core.net.toUri
 import androidx.credentials.ClearCredentialStateRequest
 import androidx.credentials.CredentialManager
 import com.google.android.material.snackbar.Snackbar
@@ -54,6 +56,11 @@ class SpaceShareActivity : AppCompatActivity() {
 
         binding.spaceCodeText.text = spaceId
 
+        binding.buttonMoreOptions.setOnClickListener { view ->
+            view.performAppHapticTap()
+            showOptionsMenu(view)
+        }
+
         // ✅ QR генерируется в фоне — убираем "Skipped 50 frames!"
         CoroutineScope(Dispatchers.Main).launch {
             val bitmap = kotlinx.coroutines.withContext(Dispatchers.Default) {
@@ -93,6 +100,34 @@ class SpaceShareActivity : AppCompatActivity() {
             }
         }
     }
+
+    private fun showOptionsMenu(anchor: android.view.View) {
+        val popupMenu = PopupMenu(this, anchor)
+        popupMenu.menuInflater.inflate(R.menu.menu_space_share_options, popupMenu.menu)
+        popupMenu.setOnMenuItemClickListener { item ->
+            when (item.itemId) {
+                R.id.action_contact_developer -> {
+                    openDeveloperProfile()
+                    true
+                }
+
+                R.id.action_open_licenses -> {
+                    startActivity(Intent(this, OpenSourceLicensesActivity::class.java))
+                    true
+                }
+
+                else -> false
+            }
+        }
+        popupMenu.show()
+    }
+
+    private fun openDeveloperProfile() {
+        val url = getString(R.string.developer_github_url)
+        val intent = Intent(Intent.ACTION_VIEW, url.toUri())
+        startActivity(intent)
+    }
+
 
     private fun clearUserDataAndSignOut() {
         // 1. Очищаем локальные данные (мгновенно)

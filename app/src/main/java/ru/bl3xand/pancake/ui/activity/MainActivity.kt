@@ -31,14 +31,14 @@ class MainActivity : AppCompatActivity() {
 
     companion object {
         private const val TAG = "MainActivity"
-        private const val TWO_FINGER_SWIPE_DOWN_THRESHOLD_PX = 120f
+        private const val THREE_FINGER_SWIPE_DOWN_THRESHOLD_PX = 120f
     }
 
     private lateinit var binding: ActivityMainBinding
     private val mainViewModel: MainViewModel by viewModels()
     private val permissionResult = ActivityResultManager.permissionResultLauncher(activity = this)
-    private var twoFingerStartY: Float? = null
-    private var twoFingerGestureConsumed = false
+    private var threeFingerStartY: Float? = null
+    private var threeFingerGestureConsumed = false
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -124,23 +124,25 @@ class MainActivity : AppCompatActivity() {
     override fun dispatchTouchEvent(ev: MotionEvent): Boolean {
         when (ev.actionMasked) {
             MotionEvent.ACTION_POINTER_DOWN -> {
-                if (ev.pointerCount == 2) {
+                if (ev.pointerCount == 3) {
                     val y1 = ev.getY(0)
                     val y2 = ev.getY(1)
-                    twoFingerStartY = (y1 + y2) / 2f
-                    twoFingerGestureConsumed = false
+                    val y3 = ev.getY(2)
+                    threeFingerStartY = (y1 + y2 + y3) / 3f
+                    threeFingerGestureConsumed = false
                 }
             }
 
             MotionEvent.ACTION_MOVE -> {
-                if (ev.pointerCount == 2 && !twoFingerGestureConsumed) {
-                    val start = twoFingerStartY
+                if (ev.pointerCount == 3 && !threeFingerGestureConsumed) {
+                    val start = threeFingerStartY
                     if (start != null) {
                         val y1 = ev.getY(0)
                         val y2 = ev.getY(1)
-                        val currentAvgY = (y1 + y2) / 2f
-                        if (currentAvgY - start > TWO_FINGER_SWIPE_DOWN_THRESHOLD_PX) {
-                            twoFingerGestureConsumed = true
+                        val y3 = ev.getY(2)
+                        val currentAvgY = (y1 + y2 + y3) / 3f
+                        if (currentAvgY - start > THREE_FINGER_SWIPE_DOWN_THRESHOLD_PX) {
+                            threeFingerGestureConsumed = true
                             startActivity(Intent(this, SpaceShareActivity::class.java))
                         }
                     }
@@ -149,8 +151,8 @@ class MainActivity : AppCompatActivity() {
 
             MotionEvent.ACTION_UP,
             MotionEvent.ACTION_CANCEL -> {
-                twoFingerStartY = null
-                twoFingerGestureConsumed = false
+                threeFingerStartY = null
+                threeFingerGestureConsumed = false
             }
         }
         return super.dispatchTouchEvent(ev)
