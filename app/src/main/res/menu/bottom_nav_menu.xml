@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_shopping"
+        android:icon="@drawable/shopping_cart_icon"
+        android:title="Покупки" />
+    <item
+        android:id="@+id/nav_calendar"
+        android:icon="@drawable/calendar_icon"
+        android:title="Дела" />
+    <item
+        android:id="@+id/nav_movie"
+        android:icon="@drawable/movie_icon"
+        android:title="Кино" />
+    <item
+        android:id="@+id/nav_notes"
+        android:icon="@drawable/edit_icon"
+        android:title="Заметки" />
+</menu>

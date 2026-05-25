@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/Widget.Pancake.DialogContainer"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/buttonTakePhoto"
+        style="@style/Widget.Pancake.Button.DialogAction"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/note_take_photo_action"
+        app:icon="@drawable/note_ic_camera"
+        app:iconGravity="textStart"
+        app:iconPadding="12dp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/buttonPickImage"
+        style="@style/Widget.Pancake.Button.DialogAction"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_s"
+        android:text="@string/note_pick_image_action"
+        app:icon="@drawable/note_ic_image"
+        app:iconGravity="textStart"
+        app:iconPadding="12dp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/buttonAddLink"
+        style="@style/Widget.Pancake.Button.DialogAction"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_s"
+        android:text="@string/note_add_link_action"
+        app:icon="@drawable/note_ic_link"
+        app:iconGravity="textStart"
+        app:iconPadding="12dp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/buttonAddHeading"
+        style="@style/Widget.Pancake.Button.DialogAction"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_s"
+        android:text="@string/note_add_heading_action"
+        app:icon="@drawable/note_ic_heading"
+        app:iconGravity="textStart"
+        app:iconPadding="12dp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/buttonAddSubheading"
+        style="@style/Widget.Pancake.Button.DialogAction"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_s"
+        android:text="@string/note_add_subheading_action"
+        app:icon="@drawable/note_ic_subheading"
+        app:iconGravity="textStart"
+        app:iconPadding="12dp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/buttonAddOrderedList"
+        style="@style/Widget.Pancake.Button.DialogAction"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_s"
+        android:text="@string/note_add_ordered_list_action"
+        app:icon="@drawable/note_ic_numbered_list"
+        app:iconGravity="textStart"
+        app:iconPadding="12dp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/buttonAddBulletList"
+        style="@style/Widget.Pancake.Button.DialogAction"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_s"
+        android:text="@string/note_add_bullet_list_action"
+        app:icon="@drawable/note_ic_bulleted_list"
+        app:iconGravity="textStart"
+        app:iconPadding="12dp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/buttonAddInlineQuote"
+        style="@style/Widget.Pancake.Button.DialogAction"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_s"
+        android:text="@string/note_add_inline_quote_action"
+        app:icon="@drawable/note_ic_quote_inline"
+        app:iconGravity="textStart"
+        app:iconPadding="12dp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/buttonAddBlockQuote"
+        style="@style/Widget.Pancake.Button.DialogAction"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_s"
+        android:text="@string/note_add_block_quote_action"
+        app:icon="@drawable/note_ic_quote_block"
+        app:iconGravity="textStart"
+        app:iconPadding="12dp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/buttonAddCode"
+        style="@style/Widget.Pancake.Button.DialogAction"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_s"
+        android:text="@string/note_add_code_action"
+        app:icon="@drawable/note_ic_code"
+        app:iconGravity="textStart"
+        app:iconPadding="12dp" />
+
+
+</LinearLayout>
+

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/actionSaveImage"
+        android:title="@string/note_save_image_action" />
+    <item
+        android:id="@+id/actionShareImage"
+        android:title="@string/note_share_image_action" />
+</menu>
+

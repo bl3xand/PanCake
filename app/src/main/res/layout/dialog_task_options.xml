@@ -1,0 +1,41 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/Widget.Pancake.DialogContainer"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/completeButton"
+        style="@style/Widget.Pancake.Button.Positive"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:icon="@drawable/complete_icon"
+        app:iconGravity="textStart"
+        app:iconPadding="12dp"
+        android:text="@string/task_completed" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/addNotifyButton"
+        style="@style/Widget.Pancake.Button.DialogAction"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:icon="@drawable/notify_icon"
+        app:iconGravity="textStart"
+        app:iconPadding="12dp"
+        android:text="@string/create_reminder"
+        android:layout_marginTop="@dimen/space_s" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/editButton"
+        style="@style/Widget.Pancake.Button.DialogAction"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:icon="@drawable/edit_icon"
+        app:iconGravity="textStart"
+        app:iconPadding="12dp"
+        android:text="@string/edit_task"
+        android:layout_marginTop="@dimen/space_s" />
+
+
+</LinearLayout>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardBackgroundColor="?attr/colorSurfaceContainerHigh"
+    app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.Pancake.SortDropdown">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="8dp">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/sortByCustom"
+            style="@style/Widget.Pancake.Button.Toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:text="@string/sort_by_custom" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/sortByUpdated"
+            style="@style/Widget.Pancake.Button.Toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:text="@string/sort_by_updated" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/sortByCreated"
+            style="@style/Widget.Pancake.Button.Toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:text="@string/sort_by_created" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/sortByColor"
+            style="@style/Widget.Pancake.Button.Toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/sort_by_color" />
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>
+

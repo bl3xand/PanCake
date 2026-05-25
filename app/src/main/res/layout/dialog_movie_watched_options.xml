@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/Widget.Pancake.DialogContainer"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/buttonWatching"
+        style="@style/Widget.Pancake.Button.DialogAction"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:icon="@drawable/ic_status_watching"
+        app:iconGravity="textStart"
+        app:iconPadding="12dp"
+        android:text="@string/movie_status_watching" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/buttonPlan"
+        style="@style/Widget.Pancake.Button.DialogAction"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_s"
+        app:icon="@drawable/ic_status_planned"
+        app:iconGravity="textStart"
+        app:iconPadding="12dp"
+        android:text="@string/movie_status_planned" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/buttonDelete"
+        style="@style/Widget.Pancake.Button.Negative"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_s"
+        app:icon="@drawable/delete_icon"
+        app:iconGravity="textStart"
+        app:iconPadding="12dp"
+        android:text="@string/delete_action" />
+
+
+</LinearLayout>

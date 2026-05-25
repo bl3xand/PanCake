@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@android:id/background"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/widget_background"
+    android:backgroundTint="?attr/colorSurfaceContainerHighest"
+    android:gravity="center"
+    android:orientation="horizontal"
+    android:paddingHorizontal="8dp"
+    android:paddingVertical="6dp"
+    android:theme="@style/Theme.Material3.DynamicColors.DayNight">
+
+    <FrameLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <ImageView
+            android:id="@+id/btn_shopping"
+            android:layout_width="52dp"
+            android:layout_height="52dp"
+            android:layout_gravity="center"
+            android:background="@drawable/widget_button_background"
+            android:backgroundTint="?attr/colorAccent"
+            android:contentDescription="@string/widget_add_shopping"
+            android:padding="12dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/shopping_cart_icon"
+            app:tint="?attr/colorOnPrimaryContainer" />
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <ImageView
+            android:id="@+id/btn_calendar"
+            android:layout_width="52dp"
+            android:layout_height="52dp"
+            android:layout_gravity="center"
+            android:background="@drawable/widget_button_background"
+            android:backgroundTint="?attr/colorAccent"
+            android:contentDescription="@string/widget_add_calendar"
+            android:padding="12dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/calendar_icon"
+            app:tint="?attr/colorOnPrimaryContainer" />
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <ImageView
+            android:id="@+id/btn_movie"
+            android:layout_width="52dp"
+            android:layout_height="52dp"
+            android:layout_gravity="center"
+            android:background="@drawable/widget_button_background"
+            android:backgroundTint="?attr/colorAccent"
+            android:contentDescription="@string/widget_add_movie"
+            android:padding="12dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/movie_icon"
+            app:tint="?attr/colorOnPrimaryContainer" />
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <ImageView
+            android:id="@+id/btn_note"
+            android:layout_width="52dp"
+            android:layout_height="52dp"
+            android:layout_gravity="center"
+            android:background="@drawable/widget_button_background"
+            android:backgroundTint="?attr/colorAccent"
+            android:contentDescription="@string/widget_add_note"
+            android:padding="12dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/edit_icon"
+            app:tint="?attr/colorOnPrimaryContainer" />
+
+    </FrameLayout>
+
+</LinearLayout>

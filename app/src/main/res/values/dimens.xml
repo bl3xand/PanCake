@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="space_xs">4dp</dimen>
+    <dimen name="space_s">8dp</dimen>
+    <dimen name="space_m">12dp</dimen>
+    <dimen name="space_l">16dp</dimen>
+
+    <dimen name="dialog_field_spacing">16dp</dimen>
+    <dimen name="dialog_bottom_spacing">12dp</dimen>
+
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="recycler_bottom_with_fab">80dp</dimen>
+    <dimen name="list_item_spacing_small">5dp</dimen>
+
+    <!-- Единые отступы карточек во всём приложении -->
+    <dimen name="card_side_margin">10dp</dimen>
+    <dimen name="card_vertical_spacing">10dp</dimen>
+    <dimen name="header_external_top_gap">15dp</dimen>
+    <!-- Отступы разделителя (header): сверху больше, чтобы визуально отделить группу -->
+    <dimen name="header_padding_horizontal">16dp</dimen>
+    <dimen name="header_padding_top">8dp</dimen>
+    <dimen name="header_padding_bottom">3dp</dimen>
+
+    <dimen name="search_field_min_height">60dp</dimen>
+    <dimen name="note_card_min_height">84dp</dimen>
+
+    <dimen name="poster_width">80dp</dimen>
+    <dimen name="poster_height">120dp</dimen>
+    <dimen name="poster_placeholder_icon">40dp</dimen>
+
+    <dimen name="note_media_divider">1dp</dimen>
+    <dimen name="media_card_stroke_width">1dp</dimen>
+</resources>
+

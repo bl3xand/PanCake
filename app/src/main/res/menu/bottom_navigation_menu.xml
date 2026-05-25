@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/nav_watching"
+        android:icon="@drawable/ic_status_watching"
+        android:title="Смотрю" />
+
+    <item
+        android:id="@+id/nav_to_watch"
+        android:icon="@drawable/ic_status_planned"
+        android:title="Буду смотреть" />
+
+    <item
+        android:id="@+id/nav_watched"
+        android:icon="@drawable/ic_status_watched"
+        android:title="Просмотрено" />
+
+</menu>

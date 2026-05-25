@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.textfield.TextInputLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layoutSpaceCode"
+    style="@style/Widget.Pancake.TextInputLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="8dp"
+    android:paddingBottom="8dp"
+    android:hint="@string/space_code_hint">
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/inputSpaceCode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textNoSuggestions"
+        android:maxLines="1" />
+
+</com.google.android.material.textfield.TextInputLayout>
+

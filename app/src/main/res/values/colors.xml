@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="shopping_food">#1F3449</color>
+    <color name="shopping_household_goods">#3D1F2E</color>
+    <color name="shopping_clothes">#5A4535</color>
+    <color name="shopping_other">#6A6F86</color>
+    <color name="shopping_home_goods">#49645A</color>
+    <color name="shopping_tech_goods">#4B5678</color>
+
+    <color name="shopping_added">#353539</color>
+
+    <color name="low_importance">#4A5C3F</color>
+    <color name="mid_importance">#5C4738</color>
+    <color name="high_importance">#613340</color>
+    <color name="pass_importance">#543B68</color>
+
+    <color name="button_red">#FF7E73</color>
+    <color name="completed_task_container">#1F3A20</color>
+    <color name="completed_task_on_container">#DCEFD9</color>
+
+    <color name="pink">#E91E63</color>
+    <color name="blue">#00BCD4</color>
+    <color name="dark_blue">#0000ff</color>
+    <color name="green">#84F802</color>
+    <color name="dark_green">#179316</color>
+    <color name="yellow">#ffff00</color>
+    <color name="dark_yellow">#FFA900</color>
+    <color name="orange">#FF7801</color>
+    <color name="red">#FF0000</color>
+    <color name="dark_red">#910D00</color>
+    <color name="purple">#870091</color>
+
+    <color name="note_color_rose">#F08AB4</color>
+    <color name="note_color_orange">#FF7746</color>
+    <color name="note_color_yellow">#FFD633</color>
+    <color name="note_color_lime">#B8D85A</color>
+    <color name="note_color_green">#0AEBAF</color>
+    <color name="note_color_sky">#7DB7FF</color>
+    <color name="note_color_blue">#4E33FF</color>
+    <color name="note_color_purple">#AE3B76</color>
+    <color name="note_color_violet">#9B7BFF</color>
+    <color name="note_color_stroke">#606570</color>
+    <color name="note_media_overlay">#66000000</color>
+
+
+</resources>
+
+
