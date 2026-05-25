@@ -11,6 +11,7 @@
         android:layout_height="0dp"
         app:cardBackgroundColor="?attr/colorSurfaceContainer"
         app:cardCornerRadius="24dp"
+        app:layout_constraintWidth_max="@dimen/space_scanner_max_size"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintDimensionRatio="1:1"
         app:layout_constraintEnd_toEndOf="parent"
@@ -52,6 +53,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
         android:text="@string/space_join_apply"
+        app:layout_constraintWidth_max="@dimen/button_max_width"
         app:layout_constraintEnd_toEndOf="@id/scannerCard"
         app:layout_constraintStart_toStartOf="@id/scannerCard"
         app:layout_constraintTop_toBottomOf="@id/layoutJoinSpaceCode" />

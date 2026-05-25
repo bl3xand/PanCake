@@ -27,6 +27,7 @@
         android:layout_marginTop="30dp"
         android:text="@string/space_create"
         app:layout_constraintBottom_toTopOf="@id/buttonJoinSpace"
+        app:layout_constraintWidth_max="@dimen/button_max_width"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/titleSpaceEntry" />
@@ -39,6 +40,7 @@
         android:layout_marginTop="24dp"
         android:text="@string/space_join"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintWidth_max="@dimen/button_max_width"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/buttonCreateSpace" />

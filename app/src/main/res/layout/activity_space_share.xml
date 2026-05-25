@@ -12,6 +12,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="24dp"
         android:text="@string/exit"
+        app:layout_constraintWidth_max="@dimen/button_max_width"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -20,13 +21,13 @@
         android:id="@+id/buttonMoreOptions"
         android:layout_width="40dp"
         android:layout_height="40dp"
-        android:layout_marginBottom="8dp"
+        android:layout_marginTop="4dp"
         android:background="?attr/selectableItemBackgroundBorderless"
         android:contentDescription="@string/space_share_options"
         android:padding="8dp"
         android:src="@drawable/note_ic_more"
-        app:layout_constraintBottom_toTopOf="@id/qrCard"
-        app:layout_constraintEnd_toEndOf="@id/qrCard"
+        app:layout_constraintEnd_toEndOf="@id/buttonLogout"
+        app:layout_constraintTop_toTopOf="parent"
         app:tint="?attr/colorOnSurface" />
 
     <com.google.android.material.card.MaterialCardView
@@ -35,6 +36,7 @@
         android:layout_height="0dp"
         app:cardBackgroundColor="@android:color/white"
         app:cardCornerRadius="28dp"
+        app:layout_constraintWidth_max="@dimen/space_qr_max_size"
         app:layout_constraintDimensionRatio="1:1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -85,6 +87,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:text="@string/space_code_copy"
+        app:layout_constraintWidth_max="@dimen/button_max_width"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/spaceCodeText"
@@ -97,6 +100,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:text="@string/share"
+        app:layout_constraintWidth_max="@dimen/button_max_width"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/buttonCopySpaceCode"

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="space_qr_max_size">340dp</dimen>
+    <dimen name="space_scanner_max_size">340dp</dimen>
+    <dimen name="button_max_width">560dp</dimen>
+</resources>
+

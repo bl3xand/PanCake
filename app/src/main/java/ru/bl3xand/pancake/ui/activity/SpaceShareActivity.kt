@@ -11,6 +11,9 @@ import androidx.core.content.edit
 import androidx.core.graphics.createBitmap
 import androidx.core.graphics.set
 import androidx.core.net.toUri
+import androidx.core.view.ViewCompat
+import androidx.core.view.WindowInsetsCompat
+import androidx.core.view.updatePadding
 import androidx.credentials.ClearCredentialStateRequest
 import androidx.credentials.CredentialManager
 import com.google.android.material.snackbar.Snackbar
@@ -40,6 +43,7 @@ class SpaceShareActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivitySpaceShareBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        applySystemInsets()
 
         binding.buttonShare.isEnabled = false
 
@@ -98,6 +102,24 @@ class SpaceShareActivity : AppCompatActivity() {
             Dialogs.showExitSpaceConfirmationDialog(this) {
                 clearUserDataAndSignOut()
             }
+        }
+    }
+
+    private fun applySystemInsets() {
+        val initialLeft = binding.root.paddingLeft
+        val initialTop = binding.root.paddingTop
+        val initialRight = binding.root.paddingRight
+        val initialBottom = binding.root.paddingBottom
+
+        ViewCompat.setOnApplyWindowInsetsListener(binding.root) { view, insets ->
+            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
+            view.updatePadding(
+                left = initialLeft,
+                top = initialTop + systemBars.top,
+                right = initialRight,
+                bottom = initialBottom + systemBars.bottom
+            )
+            insets
         }
     }
 

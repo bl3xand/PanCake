@@ -119,7 +119,7 @@ class SpaceEntryActivity : AppCompatActivity() {
 
     override fun onStop() {
         super.onStop()
-        if (isFinishing) return
+        if (isFinishing || isChangingConfigurations) return
         // User left without choosing an action — clear data
         clearUserDataAndSignOut()
     }

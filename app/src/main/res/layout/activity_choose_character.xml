@@ -28,6 +28,7 @@
         android:textAllCaps="false"
         style="@style/Widget.Pancake.Button.Positive"
         app:layout_constraintBottom_toTopOf="@id/buttonSignInWithEmail"
+        app:layout_constraintWidth_max="@dimen/button_max_width"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -40,6 +41,7 @@
         android:textAllCaps="false"
         style="@style/Widget.Material3.Button.OutlinedButton"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintWidth_max="@dimen/button_max_width"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 

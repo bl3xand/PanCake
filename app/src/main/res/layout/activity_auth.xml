@@ -13,7 +13,8 @@
         app:layout_constraintBottom_toTopOf="@id/buttonBack"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_max="@dimen/button_max_width">
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/layoutEmail"
@@ -84,6 +85,7 @@
         android:layout_marginBottom="24dp"
         android:text="@string/action_go_back"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintWidth_max="@dimen/button_max_width"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
