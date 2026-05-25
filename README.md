@@ -26,6 +26,12 @@ Pancake - это Android-органайзер для пары, семьи или
 - English
 - 简体中文 (Chinese, China)
 
+## Требования
+
+- Минимальная версия Android: API 24 (Android 7.0 Nougat)
+- Целевая версия Android: API 36
+- JDK 17
+
 ## Какие проблемы решает
 
 Во многих похожих приложениях часто не хватает гибкости для совместной работы и структурирования информации.
@@ -42,6 +48,22 @@ Pancake закрывает это за счет:
 2. Скопируйте `secrets.properties.example` в `secrets.properties`.
 3. Добавьте `google-services.json` в `app/src/google-services.json`.
 4. Откройте проект в Android Studio и запустите.
+
+## Сборка
+
+Debug APK:
+
+```bash
+./gradlew assembleDebug
+```
+
+Release APK:
+
+```bash
+./gradlew assembleRelease
+```
+
+Готовые APK появятся в `app/build/outputs/apk/`.
 
 Пример `secrets.properties`:
 
@@ -65,7 +87,7 @@ RELEASE_KEY_PASSWORD=your_key_password
 
 Нужен для авторизации и хранения/синхронизации данных между участниками пространства.
 
-- Создайте проект и Android-приложение с package name: `ru.bl3xand.pancake`
+- Создайте проект и Android-приложение с package name: `com.name.pancake`
 - Скачайте `google-services.json` и положите в `app/src/google-services.json`
 - Сайт: https://console.firebase.google.com/
 
