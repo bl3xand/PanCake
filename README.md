@@ -16,7 +16,7 @@ Pancake - это Android-органайзер для пары, семьи или
 
 ## Внешний вид
 
-![app screens](https://github.com/user-attachments/assets/6d691798-2bbf-4a8d-9056-a41dd3a14858)
+![app screen.png](app/app%20screen.png)
 
 ## Локализация
 
