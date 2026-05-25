@@ -1,6 +1,6 @@
 # Pancake
 
-Pancake - это уютный Android-органайзер для пары, семьи или друзей.
+Pancake - это Android-органайзер для пары, семьи или друзей.
 В одном пространстве можно объединить неограниченное количество участников и вести общие заметки, покупки, планы и список фильмов/сериалов.
 
 ## Почему Pancake
@@ -16,7 +16,8 @@ Pancake - это уютный Android-органайзер для пары, се
 
 ## Внешний вид
 
-<img width="3206" height="2805" alt="IMG" src="https://github.com/user-attachments/assets/d165dcf1-8320-4a10-b3c2-6d612475ae0e" />
+<img width="3206" height="2805" alt="IMG (1)" src="https://github.com/user-attachments/assets/7489fabd-1f39-41c2-8e95-a4ca6a5124c4" />
+
 
 ## Локализация
 
