@@ -40,10 +40,10 @@
         app:layout_constraintDimensionRatio="1:1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/buttonMoreOptions"
         app:layout_constraintBottom_toTopOf="@id/spaceCodeLabel"
         app:layout_constraintVertical_chainStyle="packed"
-        app:layout_constraintVertical_bias="0.3">
+        app:layout_constraintVertical_bias="0.0">
 
         <ImageView
             android:id="@+id/spaceQrImage"
@@ -104,6 +104,36 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/buttonCopySpaceCode"
-        app:layout_constraintBottom_toTopOf="@id/buttonLogout" />
+        app:layout_constraintBottom_toTopOf="@id/saveHintText" />
+
+    <TextView
+        android:id="@+id/saveHintText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="20dp"
+        android:justificationMode="inter_word"
+        android:text="@string/space_welcome_save_hint"
+        android:textAppearance="@style/TextAppearance.Material3.BodyMedium"
+        android:textColor="?attr/colorOnSurfaceVariant"
+        android:visibility="invisible"
+        app:layout_constraintWidth_max="@dimen/button_max_width"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/buttonShare"
+        app:layout_constraintBottom_toTopOf="@id/buttonContinue" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/buttonContinue"
+        style="@style/Widget.Pancake.Button.Positive"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:text="@string/continue_action"
+        android:visibility="invisible"
+        app:layout_constraintWidth_max="@dimen/button_max_width"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

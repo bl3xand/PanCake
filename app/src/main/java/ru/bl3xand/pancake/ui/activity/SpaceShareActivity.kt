@@ -35,15 +35,23 @@ import ru.bl3xand.pancake.ui.dialogs.Dialogs
 
 class SpaceShareActivity : AppCompatActivity() {
 
+    companion object {
+        const val EXTRA_WELCOME_MODE = "extra_welcome_mode"
+    }
+
     private lateinit var binding: ActivitySpaceShareBinding
     private lateinit var credentialManager: CredentialManager
     private var qrBitmap: Bitmap? = null
+    private var isWelcomeMode: Boolean = false
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivitySpaceShareBinding.inflate(layoutInflater)
         setContentView(binding.root)
         applySystemInsets()
+
+        isWelcomeMode = intent.getBooleanExtra(EXTRA_WELCOME_MODE, false)
+        configureScreenMode()
 
         binding.buttonShare.isEnabled = false
 
@@ -80,6 +88,9 @@ class SpaceShareActivity : AppCompatActivity() {
             val clipboard = getSystemService(ClipboardManager::class.java)
             clipboard?.setPrimaryClip(ClipData.newPlainText("spaceId", spaceId))
             Snackbar.make(binding.root, R.string.space_code_copied, Snackbar.LENGTH_SHORT).show()
+            if (isWelcomeMode) {
+                binding.buttonContinue.visibility = android.view.View.VISIBLE
+            }
         }
 
         binding.buttonShare.setOnClickListener { view ->
@@ -93,6 +104,8 @@ class SpaceShareActivity : AppCompatActivity() {
             )
             if (!ok) {
                 Snackbar.make(binding.root, R.string.error_unknown, Snackbar.LENGTH_SHORT).show()
+            } else if (isWelcomeMode) {
+                binding.buttonContinue.visibility = android.view.View.VISIBLE
             }
         }
 
@@ -102,6 +115,30 @@ class SpaceShareActivity : AppCompatActivity() {
             Dialogs.showExitSpaceConfirmationDialog(this) {
                 clearUserDataAndSignOut()
             }
+        }
+
+        binding.buttonContinue.setOnClickListener { view ->
+            view.performAppHapticTap()
+            startActivity(Intent(this, MainActivity::class.java))
+            finish()
+        }
+    }
+
+    private fun configureScreenMode() {
+        if (isWelcomeMode) {
+            binding.buttonLogout.visibility = android.view.View.INVISIBLE
+            binding.buttonMoreOptions.visibility = android.view.View.INVISIBLE
+            binding.buttonMoreOptions.isEnabled = false
+            binding.buttonMoreOptions.isClickable = false
+            binding.saveHintText.visibility = android.view.View.VISIBLE
+            binding.buttonContinue.visibility = android.view.View.INVISIBLE
+        } else {
+            binding.buttonLogout.visibility = android.view.View.VISIBLE
+            binding.buttonMoreOptions.visibility = android.view.View.VISIBLE
+            binding.buttonMoreOptions.isEnabled = true
+            binding.buttonMoreOptions.isClickable = true
+            binding.saveHintText.visibility = android.view.View.INVISIBLE
+            binding.buttonContinue.visibility = android.view.View.INVISIBLE
         }
     }
 

@@ -55,7 +55,9 @@ class SpaceEntryActivity : AppCompatActivity() {
             val spaceId = UUID.randomUUID().toString()
             createSpaceInFirebase(spaceId)
             viewModel.saveSpaceId(spaceId)
-            startActivity(Intent(this, SpaceWelcomeShareActivity::class.java))
+            val intent = Intent(this, SpaceShareActivity::class.java)
+                .putExtra(SpaceShareActivity.EXTRA_WELCOME_MODE, true)
+            startActivity(intent)
             finish()
         }
 

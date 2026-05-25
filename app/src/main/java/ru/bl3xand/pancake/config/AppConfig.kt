@@ -3,7 +3,6 @@ package ru.bl3xand.pancake.config
 /**
  * Централизованная конфигурация приложения.
  * Содержит все константы, настройки и параметры.
- * Избегает хардкода по всему приложению.
  */
 object AppConfig {
 
@@ -11,9 +10,10 @@ object AppConfig {
     object Preferences {
         const val CHARACTER_KEY = "character"
         const val SPACE_ID_KEY = "space_id"
+        const val LOCALE_INITIALIZED_KEY = "locale_initialized"
     }
 
-    // ==================== Персонажи ====================
+    // ==================== Пользователи ====================
     object Characters {
         const val DEFAULT = "Unknown"
     }

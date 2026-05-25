@@ -96,9 +96,6 @@ class OpenSourceLicensesActivity : AppCompatActivity() {
                 "com.github.chrisbanes:PhotoView (Apache-2.0)",
                 "com.journeyapps:zxing-android-embedded (Apache-2.0)",
                 "com.google.zxing:core (Apache-2.0)"
-            ),
-            "Testing" to listOf(
-                "junit:junit (EPL-1.0)"
             )
         )
 
@@ -112,8 +109,7 @@ class OpenSourceLicensesActivity : AppCompatActivity() {
             "PhotoView" to "https://github.com/chrisbanes/PhotoView",
             "ZXing" to "https://github.com/zxing/zxing",
             "ZXing Android Embedded" to "https://github.com/journeyapps/zxing-android-embedded",
-            "Google Identity" to "https://developers.google.com/identity",
-            "JUnit" to "https://junit.org/"
+            "Google Identity" to "https://developers.google.com/identity"
         )
 
         val sectionsHtml = sections.joinToString(separator = "") { (title, items) ->
